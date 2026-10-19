@@ -1,3 +1,4 @@
+
 /*
 Problem: Two Sum
 
@@ -25,18 +26,18 @@ Approach:
 Time Complexity: O(n^2)
 Space Complexity: O(1), excluding the returned array.
 */
-class Solution{
+class TwoSum{
     public int[] twoSum(int a[],int t){
         int b[]=new int[2];
         for(int i=0;i<a.length;i++){
             for(int j=i+1;j<a.length;j++){
                 if(a[i]+a[j]==t){
-                    a[0]=i;
-                    a[1]=j;
-                    return a;
+                    b[0]=i;
+                    b[1]=j;
+                    return b;
                 }
             }
         }
-        return a;
+        return b;
     }
 }
