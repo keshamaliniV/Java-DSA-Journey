@@ -26,6 +26,7 @@ Approach:
 Time Complexity: O(n^2)
 Space Complexity: O(1), excluding the returned array.
 */
+import java.util.Scanner;
 class TwoSum{
     public int[] twoSum(int a[],int t){
         int b[]=new int[2];
@@ -39,5 +40,18 @@ class TwoSum{
             }
         }
         return b;
+    }
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int a[]=new int[n];
+        for(int i=0;i<n;i++) {
+            a[i]=sc.nextInt();
+        }
+        int t=sc.nextInt();
+        TwoSum obj=new TwoSum();
+        int res[]=obj.twoSum(a, t);
+        System.out.println("[" +res[0]+", "+res[1]+"]");
+        sc.close();
     }
 }
