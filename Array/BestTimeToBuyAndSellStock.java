@@ -26,6 +26,7 @@ Time Complexity: O(n)
 Space Complexity: O(1)
 */
 
+import java.util.Scanner;
 public class BestTimeToBuyAndSellStock {
     public int maxProfit(int[] prices) {
         int min=prices[0];
@@ -36,4 +37,17 @@ public class BestTimeToBuyAndSellStock {
         }
         return max;
     }
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int prices[]=new int[n];
+        for (int i=0;i<n;i++){
+            prices[i]=sc.nextInt();
+        }
+        BestTimeToBuyAndSellStock obj=new BestTimeToBuyAndSellStock();
+        int res=obj.maxProfit(prices);
+        System.out.println(res);
+        sc.close();
+    }
 }
+
